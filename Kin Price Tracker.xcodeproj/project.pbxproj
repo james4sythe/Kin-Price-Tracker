@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46ABE3252E2A3DB47EB2154F /* Pods_Kin_Price_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15188EF88BFF29EF2037BDBA /* Pods_Kin_Price_Tracker.framework */; };
+		856475472131826500E42408 /* HtmlCode.html in Resources */ = {isa = PBXBuildFile; fileRef = 856475462131826500E42408 /* HtmlCode.html */; };
 		859FF4192123798100A4A012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FF4182123798100A4A012 /* AppDelegate.swift */; };
 		859FF41B2123798100A4A012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FF41A2123798100A4A012 /* ViewController.swift */; };
 		859FF41E2123798100A4A012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859FF41C2123798100A4A012 /* Main.storyboard */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15188EF88BFF29EF2037BDBA /* Pods_Kin_Price_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kin_Price_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42408925B40486A6280DD71F /* Pods-Kin Price Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kin Price Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kin Price Tracker/Pods-Kin Price Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		856475462131826500E42408 /* HtmlCode.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = HtmlCode.html; sourceTree = "<group>"; };
 		859FF4152123798100A4A012 /* Kin Price Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kin Price Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		859FF4182123798100A4A012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859FF41A2123798100A4A012 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		859FF4222123798500A4A012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		859FF4252123798500A4A012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		859FF4272123798500A4A012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C433055DF0E27F404A92FAE9 /* Pods-Kin Price Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kin Price Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kin Price Tracker/Pods-Kin Price Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46ABE3252E2A3DB47EB2154F /* Pods_Kin_Price_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C687EACAB49AB32B944D621 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15188EF88BFF29EF2037BDBA /* Pods_Kin_Price_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		859FF40C2123798000A4A012 = {
 			isa = PBXGroup;
 			children = (
 				859FF4172123798100A4A012 /* Kin Price Tracker */,
 				859FF4162123798100A4A012 /* Products */,
+				EAADE8304E1D0310D28C278D /* Pods */,
+				5C687EACAB49AB32B944D621 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +80,18 @@
 				859FF4242123798500A4A012 /* LaunchScreen.storyboard */,
 				859FF4272123798500A4A012 /* Info.plist */,
 				859FF41F2123798100A4A012 /* Kin_Price_Tracker.xcdatamodeld */,
+				856475462131826500E42408 /* HtmlCode.html */,
 			);
 			path = "Kin Price Tracker";
+			sourceTree = "<group>";
+		};
+		EAADE8304E1D0310D28C278D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42408925B40486A6280DD71F /* Pods-Kin Price Tracker.debug.xcconfig */,
+				C433055DF0E27F404A92FAE9 /* Pods-Kin Price Tracker.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 859FF42A2123798500A4A012 /* Build configuration list for PBXNativeTarget "Kin Price Tracker" */;
 			buildPhases = (
+				72C89D9949505E6048BBD5DD /* [CP] Check Pods Manifest.lock */,
 				859FF4112123798100A4A012 /* Sources */,
 				859FF4122123798100A4A012 /* Frameworks */,
 				859FF4132123798100A4A012 /* Resources */,
+				FD56AD773CEA300F0CCD8D91 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856475472131826500E42408 /* HtmlCode.html in Resources */,
 				859FF4262123798500A4A012 /* LaunchScreen.storyboard in Resources */,
 				859FF4232123798500A4A012 /* Assets.xcassets in Resources */,
 				859FF41E2123798100A4A012 /* Main.storyboard in Resources */,
@@ -132,6 +162,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72C89D9949505E6048BBD5DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kin Price Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD56AD773CEA300F0CCD8D91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kin Price Tracker/Pods-Kin Price Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kin Price Tracker/Pods-Kin Price Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		859FF4112123798100A4A012 /* Sources */ = {
@@ -284,37 +355,47 @@
 		};
 		859FF42B2123798500A4A012 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42408925B40486A6280DD71F /* Pods-Kin Price Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JUD6PG98M2;
 				INFOPLIST_FILE = "Kin Price Tracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.james4sythe.Kin-Price-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		859FF42C2123798500A4A012 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C433055DF0E27F404A92FAE9 /* Pods-Kin Price Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JUD6PG98M2;
 				INFOPLIST_FILE = "Kin Price Tracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.james4sythe.Kin-Price-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

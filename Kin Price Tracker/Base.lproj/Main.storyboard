@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,83 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kin_Price_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kin" translatesAutoresizingMaskIntoConstraints="NO" id="sRG-7a-kyZ">
+                                <rect key="frame" x="95" y="45" width="224" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sRG-7a-kyZ" secondAttribute="height" multiplier="1:1" id="5O4-wI-led"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-xl-ma2">
+                                <rect key="frame" x="94.666666666666671" y="294" width="224.66666666666663" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hi-vW-HjK">
+                                <rect key="frame" x="0.0" y="341" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="opP-TX-TNL"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="a5t-Ve-KvK"/>
+                                </connections>
+                            </pickerView>
+                            <wkWebView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="4N8-uD-Xoj">
+                                <rect key="frame" x="0.0" y="631" width="414" height="105"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="6Ef-2x-gX0"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xc-0d-OXL">
+                                <rect key="frame" x="0.0" y="573" width="414" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <state key="normal" title="Refresh Chart"/>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rhm-Vx-zus"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94693374686259846" green="0.98764098412941848" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4N8-uD-Xoj" secondAttribute="trailing" id="3uT-Jp-p3c"/>
+                            <constraint firstItem="sRG-7a-kyZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="7pV-MS-HYP"/>
+                            <constraint firstItem="6hi-vW-HjK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9Co-3O-bJ0"/>
+                            <constraint firstItem="4N8-uD-Xoj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9lL-Qv-f7H"/>
+                            <constraint firstItem="6xc-0d-OXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bof-Ox-xvA"/>
+                            <constraint firstItem="4N8-uD-Xoj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EhA-Ev-y7O"/>
+                            <constraint firstItem="6xc-0d-OXL" firstAttribute="top" secondItem="6hi-vW-HjK" secondAttribute="bottom" constant="16" id="EzO-li-bmK"/>
+                            <constraint firstItem="Gee-xl-ma2" firstAttribute="top" secondItem="sRG-7a-kyZ" secondAttribute="bottom" constant="25" id="Nu1-It-A7z"/>
+                            <constraint firstItem="sRG-7a-kyZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="V9h-Cl-jZj"/>
+                            <constraint firstItem="4N8-uD-Xoj" firstAttribute="top" secondItem="6xc-0d-OXL" secondAttribute="bottom" constant="19" id="aWi-ga-Az8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sRG-7a-kyZ" secondAttribute="trailing" constant="95" id="alU-dr-vdg"/>
+                            <constraint firstItem="6hi-vW-HjK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ca4-VN-Hsh"/>
+                            <constraint firstItem="6hi-vW-HjK" firstAttribute="top" secondItem="Gee-xl-ma2" secondAttribute="bottom" constant="11" id="dYa-1t-NIL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4N8-uD-Xoj" secondAttribute="bottom" id="j36-v2-3yN"/>
+                            <constraint firstItem="Gee-xl-ma2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oDS-Ex-mIM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6xc-0d-OXL" secondAttribute="trailing" id="pzT-DF-4fv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="currencyPicker" destination="6hi-vW-HjK" id="JzX-Dw-i8E"/>
+                        <outlet property="kinPriceLabel" destination="Gee-xl-ma2" id="qdT-YH-IAx"/>
+                        <outlet property="webView" destination="4N8-uD-Xoj" id="OxO-Zv-tWd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kin" width="128" height="128"/>
+    </resources>
 </document>
